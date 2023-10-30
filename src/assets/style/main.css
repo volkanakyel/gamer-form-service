@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  /* font-family: $family; */
+  background-color: #eff5ff;
+  font-size: 16px;
+  /* font-weight: $fw-medium; */
+  color: #fff;
+  min-height: 100vh;
+}
