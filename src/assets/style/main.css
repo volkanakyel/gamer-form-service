@@ -1,12 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-  /* font-family: $family; */
-  background-color: #eff5ff;
-  font-size: 16px;
-  /* font-weight: $fw-medium; */
-  color: #fff;
-  min-height: 100vh;
+  @apply bg-background text-sm min-h-screen font-ubuntu text-grey-300;
 }
