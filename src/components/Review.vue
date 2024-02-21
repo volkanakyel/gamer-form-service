@@ -1,15 +1,10 @@
 <template>
   <div class="">
-    <div
-      class="form-container"
-    >
+    <div class="form-container">
       <div
-        class="bg-[url('/bg-sidebar-desktop.svg')] bg-auto bg-no-repeat flex flex-col text-white p-8 gap-8 max-w-background w-full rounded-xl"
-      >
+        class="bg-[url('/bg-sidebar-desktop.svg')] bg-auto bg-no-repeat flex flex-col text-white p-8 gap-8 max-w-background w-full rounded-xl">
         <div class="flex items-center gap-4">
-          <div
-            class="bg-light text-dark w-9 h-9 flex items-center justify-center rounded-full"
-          >
+          <div class="bg-light text-dark w-9 h-9 flex items-center justify-center rounded-full">
             <span class="font-bold">1</span>
           </div>
           <div class="uppercase">
@@ -18,9 +13,7 @@
           </div>
         </div>
         <div class="flex align-center gap-4">
-          <div
-            class="border-2 border-white w-9 h-9 flex items-center justify-center rounded-full"
-          >
+          <div class="border-2 border-white w-9 h-9 flex items-center justify-center rounded-full">
             <span class="font-bold text-white">2</span>
           </div>
           <div class="uppercase">
@@ -29,9 +22,7 @@
           </div>
         </div>
         <div class="flex align-center gap-4">
-          <div
-            class="border-2 border-white w-9 h-9 flex items-center justify-center rounded-full"
-          >
+          <div class="border-2 border-white w-9 h-9 flex items-center justify-center rounded-full">
             <span class="font-bold text-white">3</span>
           </div>
           <div class="uppercase">
@@ -40,9 +31,7 @@
           </div>
         </div>
         <div class="flex align-center gap-4">
-          <div
-            class="border-2 border-white w-9 h-9 flex items-center justify-center rounded-full"
-          >
+          <div class="border-2 border-white w-9 h-9 flex items-center justify-center rounded-full">
             <span class="font-bold text-white">4</span>
           </div>
           <div class="uppercase">
@@ -92,8 +81,7 @@
           <button class="text-grey-300">Go Back</button>
 
           <button
-            class="bg-purple text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-blue-900 transition duration-300 self-end"
-          >
+            class="bg-purple text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-blue-900 transition duration-300 self-end">
             Confirm
           </button>
         </div>
