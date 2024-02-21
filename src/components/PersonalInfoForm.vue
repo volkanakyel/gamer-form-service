@@ -21,8 +21,7 @@
           class="border border-grey-100 rounded pl-4 py-2 w-full focus:outline-none focus:border-gray-500" />
       </div>
     </div>
-    <button @click="updateStep"
-      class="bg-dark text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-blue-900 transition duration-300 mt-20 mb-2 self-end">
+    <button @click="updateStep" class="next-btn">
       Next Step
     </button>
   </div>
