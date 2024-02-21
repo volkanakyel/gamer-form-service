@@ -1,20 +1,28 @@
 <script setup lang="ts">
+import { ref, computed } from 'vue';
 import PersonalInfoForm from "./components/PersonalInfoForm.vue";
 import SelectPlanForm from "./components/SelectPlanForm.vue";
 import AddOnsForm from "./components/AddOnsForm.vue";
 import Review from "./components/Review.vue";
 import ConfirmationBanner from "./components/ConfirmationBanner.vue";
-import { ref } from "vue";
+import type { DefineComponent } from 'vue';
 
-const currentStep = ref(5);
+type StepComponentMap = {
+  [key: number]: DefineComponent<{}, {}, any>;
+};
+
+const stepComponents: StepComponentMap = {
+  1: PersonalInfoForm,
+  2: SelectPlanForm,
+  3: AddOnsForm,
+  4: Review,
+  5: ConfirmationBanner,
+};
+
+const currentStep = ref<number>(5);
+const currentComponent = computed<DefineComponent<{}, {}, any>>(() => stepComponents[currentStep.value]);
 </script>
 
 <template>
-  <PersonalInfoForm v-if="currentStep === 1" />
-  <SelectPlanForm v-if="currentStep === 2" />
-  <AddOnsForm v-if="currentStep === 3" />
-  <Review v-if="currentStep === 4" />
-  <ConfirmationBanner v-if="currentStep === 5" />
+  <component :is="currentComponent" />
 </template>
-
-<style scoped></style>
