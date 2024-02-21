@@ -1,8 +1,7 @@
 <template>
   <div class="">
     <div class="form-container">
-      <div
-        class="bg-[url('/bg-sidebar-desktop.svg')] bg-auto bg-no-repeat flex flex-col text-white p-8 gap-8 max-w-background w-full rounded-xl">
+      <div class="step-infos">
         <div class="flex items-center gap-4">
           <div class="bg-light text-dark w-9 h-9 flex items-center justify-center rounded-full">
             <span class="font-bold">1</span>
@@ -40,7 +39,7 @@
           </div>
         </div>
       </div>
-      <div class="flex flex-col text-blue-400 m-auto">
+      <div class="step-content">
         <h2 class="text-4xl text-dark mb-3 mt-10 text-l font-bold">
           Finishing up
         </h2>

@@ -11,3 +11,15 @@ body {
 .form-container {
   @apply bg-white flex max-w-container shadow-md m-auto mt-20 p-4 gap-6 rounded-2xl;
 }
+
+.step-infos {
+  @apply bg-[url('/bg-sidebar-desktop.svg')] bg-auto bg-no-repeat flex flex-col text-white p-8 gap-8 max-w-background w-full rounded-xl;
+}
+
+.step-content {
+  @apply flex flex-col text-blue-400 m-auto;
+}
+
+.next-btn {
+  @apply bg-dark text-white font-semibold px-8 py-3 rounded-lg shadow-md hover: bg-blue-900 transition duration-300 self-end;
+}
