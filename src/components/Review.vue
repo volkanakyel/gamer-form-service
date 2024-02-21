@@ -4,7 +4,7 @@
       class="bg-white flex max-w-container shadow-md m-auto mt-20 p-4 gap-6 rounded-2xl"
     >
       <div
-        class="bg-[url('/public/bg-sidebar-desktop.svg')] bg-auto bg-no-repeat flex flex-col text-white p-8 gap-8 max-w-background w-full rounded-xl"
+        class="bg-[url('/bg-sidebar-desktop.svg')] bg-auto bg-no-repeat flex flex-col text-white p-8 gap-8 max-w-background w-full rounded-xl"
       >
         <div class="flex items-center gap-4">
           <div
