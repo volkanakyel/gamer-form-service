@@ -5,6 +5,7 @@ import SelectPlanForm from "./components/SelectPlanForm.vue";
 import AddOnsForm from "./components/AddOnsForm.vue";
 import Review from "./components/Review.vue";
 import ConfirmationBanner from "./components/ConfirmationBanner.vue";
+import FormStepper from "./components/FormStepper.vue";
 import type { DefineComponent } from 'vue';
 
 type StepComponentMap = {
@@ -19,10 +20,16 @@ const stepComponents: StepComponentMap = {
   5: ConfirmationBanner,
 };
 
-const currentStep = ref<number>(5);
+const currentStep = ref<number>(1);
 const currentComponent = computed<DefineComponent<{}, {}, any>>(() => stepComponents[currentStep.value]);
+const updateFormStep = (): void => {
+  currentStep.value++
+}
 </script>
 
 <template>
-  <component :is="currentComponent" />
+  <div class="form-container">
+    <FormStepper />
+    <component :is="currentComponent" @updateStep="updateFormStep" />
+  </div>
 </template>
