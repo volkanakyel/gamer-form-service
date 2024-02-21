@@ -7,3 +7,7 @@
 body {
   @apply bg-background text-sm min-h-screen font-ubuntu text-grey-300;
 }
+
+.form-container {
+  @apply bg-white flex max-w-container shadow-md m-auto mt-20 p-4 gap-6 rounded-2xl;
+}
