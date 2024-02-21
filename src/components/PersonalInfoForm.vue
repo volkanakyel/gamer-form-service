@@ -28,7 +28,9 @@
 </template>
 
 <script setup lang="ts">
-const emit = defineEmits(['updateStep'])
+import { defineEmits } from 'vue'
+type Emits = (event: 'updateStep') => void
+const emit: Emits = defineEmits(['updateStep'])
 const updateStep = () => {
   emit('updateStep')
 }
