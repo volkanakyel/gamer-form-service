@@ -23,8 +23,8 @@ const stepComponents: StepComponentMap = {
 
 const currentStep = ref<number>(1);
 const currentComponent = computed<DefineComponent<{}, {}, any>>(() => stepComponents[currentStep.value]);
-const updateFormStep = (): void => {
-  currentStep.value++
+const updateFormStep = (targetStep: number): void => {
+  targetStep > 0 ? currentStep.value++ : currentStep.value--;
 }
 
 const showNavigator = computed(() => {

@@ -1,8 +1,8 @@
 <template>
   <div class="flex justify-between mt-20 items-center mb-2">
-    <button v-if="hasPreviousStep" class="text-grey-300">Go Back</button>
+    <button v-if="hasPreviousStep" @click="updateStep(-1)" class="text-grey-300">Go Back</button>
 
-    <button v-if="hasNextStep" @click="updateStep" class="next-btn">
+    <button v-if="hasNextStep" @click="updateStep(1)" class="next-btn">
       Next Step
     </button>
   </div>
@@ -10,7 +10,7 @@
 
 <script setup lang="ts">
 import { defineEmits, computed } from 'vue'
-type Emits = (event: 'updateStep') => void
+type Emits = (event: 'updateStep', targetStep: number) => void
 const props = defineProps({
   currentStep: {
     type: Number,
@@ -27,8 +27,8 @@ const hasNextStep = computed(() => {
 })
 
 const emit: Emits = defineEmits(['updateStep'])
-const updateStep = () => {
-  emit('updateStep')
+const updateStep = (targetStep: number) => {
+  emit('updateStep', targetStep)
 }
 </script>
 
