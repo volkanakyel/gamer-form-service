@@ -1,7 +1,7 @@
 <template>
   <div class="step-infos">
     <div class="flex items-center gap-4">
-      <div class="bg-light text-dark w-9 h-9 flex items-center justify-center rounded-full">
+      <div class="activeStep">
         <span class="font-bold">1</span>
       </div>
       <div class="uppercase">
@@ -10,7 +10,7 @@
       </div>
     </div>
     <div class="flex align-center gap-4">
-      <div class="border-2 border-white w-9 h-9 flex items-center justify-center rounded-full">
+      <div class="inactiveStep">
         <span class="font-bold text-white">2</span>
       </div>
       <div class="uppercase">
@@ -19,7 +19,7 @@
       </div>
     </div>
     <div class="flex align-center gap-4">
-      <div class="border-2 border-white w-9 h-9 flex items-center justify-center rounded-full">
+      <div class="inactiveStep">
         <span class="font-bold text-white">3</span>
       </div>
       <div class="uppercase">
@@ -28,7 +28,7 @@
       </div>
     </div>
     <div class="flex align-center gap-4">
-      <div class="border-2 border-white w-9 h-9 flex items-center justify-center rounded-full">
+      <div class="inactiveStep">
         <span class="font-bold text-white">4</span>
       </div>
       <div class="uppercase">
@@ -40,7 +40,6 @@
 </template>
 
 <script setup lang="ts">
-const emit = defineEmits(['updateStep'])
 </script>
 
 <style scoped></style>

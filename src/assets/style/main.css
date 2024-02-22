@@ -16,10 +16,19 @@ body {
   @apply bg-[url('/bg-sidebar-desktop.svg')] bg-auto bg-no-repeat flex flex-col text-white p-8 gap-8 max-w-background w-full rounded-xl;
 }
 
+.next-btn {
+  @apply bg-dark text-white font-semibold px-8 hover:bg-blue py-3 rounded-lg shadow-md transition duration-300 ml-auto;
+}
+
+/* Stepper */
 .step-content {
   @apply flex flex-col text-dark m-auto;
 }
 
-.next-btn {
-  @apply bg-dark text-white font-semibold px-8 hover:bg-blue py-3 rounded-lg shadow-md transition duration-300 ml-auto;
+.activeStep {
+  @apply bg-light text-dark w-9 h-9 flex items-center justify-center rounded-full;
+}
+
+.inactiveStep {
+  @apply border-2 border-white w-9 h-9 flex items-center justify-center rounded-full;
 }
