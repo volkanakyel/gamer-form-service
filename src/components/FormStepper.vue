@@ -48,7 +48,7 @@ const props = defineProps({
 })
 
 const activateStep = (step: number) => {
-  return props.currentStep === step ? 'activeStep' : 'inactiveStep';
+  return props.currentStep === step || step === 4 && props.currentStep > 3 ? 'activeStep' : 'inactiveStep';
 };
 
 </script>
