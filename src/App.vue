@@ -26,6 +26,10 @@ const currentComponent = computed<DefineComponent<{}, {}, any>>(() => stepCompon
 const updateFormStep = (): void => {
   currentStep.value++
 }
+
+const showNavigator = computed(() => {
+  return currentStep.value > 0 && currentStep.value < 5;
+})
 </script>
 
 <template>
@@ -33,7 +37,7 @@ const updateFormStep = (): void => {
     <FormStepper />
     <div class="step-content">
       <component :is="currentComponent" />
-      <FormNavigator @updateStep="updateFormStep" />
+      <FormNavigator v-show="showNavigator" @updateStep="updateFormStep" :currentStep="currentStep" />
     </div>
   </div>
 </template>
