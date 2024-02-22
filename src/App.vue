@@ -6,6 +6,7 @@ import AddOnsForm from "./components/AddOnsForm.vue";
 import Review from "./components/Review.vue";
 import ConfirmationBanner from "./components/ConfirmationBanner.vue";
 import FormStepper from "./components/FormStepper.vue";
+import FormNavigator from "./components/FormNavigator.vue";
 import type { DefineComponent } from 'vue';
 
 type StepComponentMap = {
@@ -30,6 +31,9 @@ const updateFormStep = (): void => {
 <template>
   <div class="form-container">
     <FormStepper />
-    <component :is="currentComponent" @updateStep="updateFormStep" />
+    <div class="step-content">
+      <component :is="currentComponent" />
+      <FormNavigator @updateStep="updateFormStep" />
+    </div>
   </div>
 </template>
