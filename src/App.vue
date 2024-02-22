@@ -34,7 +34,7 @@ const showNavigator = computed(() => {
 
 <template>
   <div class="form-container">
-    <FormStepper />
+    <FormStepper :currentStep="currentStep" />
     <div class="step-content">
       <component :is="currentComponent" />
       <FormNavigator v-show="showNavigator" @updateStep="updateFormStep" :currentStep="currentStep" />

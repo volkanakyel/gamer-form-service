@@ -30,5 +30,5 @@ body {
 }
 
 .inactiveStep {
-  @apply border-2 border-white w-9 h-9 flex items-center justify-center rounded-full;
+  @apply border-2 border-white w-9 h-9 flex items-center justify-center rounded-full text-white;
 }
