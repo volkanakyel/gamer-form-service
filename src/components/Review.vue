@@ -1,12 +1,12 @@
 <template>
   <div class="step">
-    <h2 class="text-4xl text-dark mb-3 mt-10 text-l font-bold">
+    <h2 class="step-title">
       Finishing up
     </h2>
     <p class="text-grey-300">
       Double-check everything looks OK before confirming.
     </p>
-    <div class="bg-grey-200 p-6 rounded-lg w-full max-w-addons mt-8">
+    <div class="bg-grey-200 p-6 rounded-lg w-full md:max-w-addons mt-8">
       <!-- Title and Price -->
       <div class="flex justify-between items-center mb-4">
         <div>

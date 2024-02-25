@@ -10,7 +10,7 @@
 </template>
 
 <script setup lang="ts">
-import { defineEmits, computed } from 'vue'
+import { computed } from 'vue'
 type Emits = (event: 'updateStep', targetStep: number) => void
 const props = defineProps({
   currentStep: {

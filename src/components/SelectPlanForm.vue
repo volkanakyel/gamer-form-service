@@ -1,15 +1,15 @@
 <template>
   <div class="step">
-    <h2 class="text-4xl mb-3 mt-10 text-l font-bold">Select your plan</h2>
+    <h2 class="step-title">Select your plan</h2>
     <p class="text-grey-300">
       You have the option of monthly or yearly billing.
     </p>
-    <div class="mt-8 flex justify-start gap-5">
+    <div class="mt-8 flex flex-col md:flex-row justify-start gap-5">
       <div class="plan-selection">
         <div class="text-left rounded-full">
           <img src="../assets/images/arcade-icon.svg" alt="" />
         </div>
-        <div class="mt-9 text-left">
+        <div class="md:mt-9 text-left">
           <p class="text-sm text-dark font-semibold">Advanced</p>
           <p class="text-grey-300 mt-2">$12/mo</p>
         </div>
@@ -18,7 +18,7 @@
         <div class="text-left rounded-full">
           <img src="../assets/images/advanced-icon.svg" alt="" />
         </div>
-        <div class="mt-9 text-left">
+        <div class="md:mt-9 text-left">
           <p class="text-sm text-dark font-semibold">Advanced</p>
           <p class="text-grey-300 mt-2">$12/mo</p>
         </div>
@@ -27,7 +27,7 @@
         <div class="text-left rounded-full">
           <img src="../assets/images/pro-icon.svg" alt="" />
         </div>
-        <div class="mt-9 text-left">
+        <div class="md:mt-9 text-left">
           <p class="text-sm text-dark font-semibold">Advanced</p>
           <p class="text-grey-300 mt-2">$12/mo</p>
         </div>

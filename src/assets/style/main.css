@@ -9,11 +9,15 @@ body {
 }
 
 .plan-selection {
-  @apply bg-white p-4 rounded-lg border-2 border-grey-100 max-w-card w-full;
+  @apply bg-white p-4 rounded-lg border-2 border-grey-100 md:max-w-card w-full flex justify-start gap-2 md:block;
 }
 
 .step {
   @apply bg-white p-6 md:p-0 rounded-lg md:m-0 absolute top-28 md:static m-auto w-container left-1/2 transform -translate-x-1/2 md:transform-none;
+}
+
+.step-title {
+  @apply mb-3 mt-10 text-l font-bold;
 }
 
 .form-container {
@@ -33,10 +37,10 @@ body {
   @apply md:flex md:flex-col text-dark m-auto max-w-full w-full md:max-w-addons md:p-0 rounded-lg;
 }
 
-.activeStep {
+.active-step {
   @apply bg-light text-dark w-9 h-9 flex items-center justify-center rounded-full;
 }
 
-.inactiveStep {
+.inactive-step {
   @apply border-2 border-white w-9 h-9 flex items-center justify-center rounded-full text-white;
 }
