@@ -36,8 +36,22 @@ const showNavigator = computed(() => {
   <div class="form-container">
     <FormStepper :currentStep="currentStep" />
     <div class="step-content">
-      <component :is="currentComponent" />
+      <transition name="fade" mode="out-in">
+        <component :is="currentComponent" :key="currentStep" />
+      </transition>
       <FormNavigator v-show="showNavigator" @updateStep="updateFormStep" :currentStep="currentStep" />
     </div>
   </div>
 </template>
+
+<style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.25s ease;
+}
+
+.fade-enter-from,
+.fade-leave-active {
+  opacity: 0;
+}
+</style>
