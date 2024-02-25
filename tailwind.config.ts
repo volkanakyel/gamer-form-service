@@ -10,6 +10,7 @@ module.exports = {
       },
       width: {
         addons: "450px",
+        container: "90%"
       },
       height: {
         banner: "568px",

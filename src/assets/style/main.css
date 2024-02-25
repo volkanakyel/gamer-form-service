@@ -8,12 +8,16 @@ body {
   @apply bg-background text-sm min-h-screen font-ubuntu text-grey-300;
 }
 
+.plan-selection {
+  @apply bg-white p-4 rounded-lg border-2 border-grey-100 max-w-card w-full;
+}
+
 .step {
-  @apply bg-white p-6 md:p-0 rounded-lg;
+  @apply bg-white p-6 md:p-0 rounded-lg md:m-0 absolute top-28 md:static m-auto w-container left-1/2 transform -translate-x-1/2 md:transform-none;
 }
 
 .form-container {
-  @apply flex max-w-container shadow-md m-auto md:mt-20 md:p-4 gap-6 rounded-2xl flex-col md:flex-row bg-background md:bg-white px-4 relative;
+  @apply flex max-w-container md:shadow-md m-auto md:mt-20 md:p-4 gap-6 rounded-2xl flex-col md:flex-row bg-background md:bg-white relative;
 }
 
 .step-infos {

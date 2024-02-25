@@ -5,7 +5,7 @@
       You have the option of monthly or yearly billing.
     </p>
     <div class="mt-8 flex justify-start gap-5">
-      <div class="bg-white p-4 rounded-lg border-2 border-grey-100 max-w-card w-full">
+      <div class="plan-selection">
         <div class="text-left rounded-full">
           <img src="../assets/images/arcade-icon.svg" alt="" />
         </div>
@@ -14,7 +14,7 @@
           <p class="text-grey-300 mt-2">$12/mo</p>
         </div>
       </div>
-      <div class="bg-white p-4 rounded-lg border-2 border-grey-100 max-w-card w-full">
+      <div class="plan-selection">
         <div class="text-left rounded-full">
           <img src="../assets/images/advanced-icon.svg" alt="" />
         </div>
@@ -23,7 +23,7 @@
           <p class="text-grey-300 mt-2">$12/mo</p>
         </div>
       </div>
-      <div class="bg-white p-4 rounded-lg border-2 border-grey-100 max-w-card w-full">
+      <div class="plan-selection">
         <div class="text-left rounded-full">
           <img src="../assets/images/pro-icon.svg" alt="" />
         </div>
