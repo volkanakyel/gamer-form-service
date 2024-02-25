@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-between mt-20 items-center mb-2">
+  <div class="flex justify-between mt-20 items-center mb-2 bg-white p-4 rounded-lg md:p-0">
     <button v-if="hasPreviousStep" @click="updateStep(-1)" class="text-grey-300">Go Back</button>
 
     <button v-if="hasNextStep" @click="updateStep(1)" class="next-btn">

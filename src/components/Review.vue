@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="step">
     <h2 class="text-4xl text-dark mb-3 mt-10 text-l font-bold">
       Finishing up
     </h2>

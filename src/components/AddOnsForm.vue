@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="step">
     <h2 class="text-4xl mb-3 mt-10 text-l font-bold">Pick add-ons</h2>
     <p class="text-grey-300">
       Add-ons help enhance your gaming experience.
