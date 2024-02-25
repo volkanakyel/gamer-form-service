@@ -39,7 +39,8 @@ const showNavigator = computed(() => {
       <transition name="fade" mode="out-in">
         <component :is="currentComponent" :key="currentStep" />
       </transition>
-      <FormNavigator v-show="showNavigator" @updateStep="updateFormStep" :currentStep="currentStep" />
+      <!-- Single FormNavigator with responsive classes -->
+      <FormNavigator v-show="showNavigator" @updateStep="updateFormStep" :currentStep="currentStep" class="" />
     </div>
   </div>
 </template>

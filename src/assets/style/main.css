@@ -8,12 +8,16 @@ body {
   @apply bg-background text-sm min-h-screen font-ubuntu text-grey-300;
 }
 
+.step {
+  @apply bg-white;
+}
+
 .form-container {
-  @apply bg-white flex max-w-container shadow-md m-auto mt-20 p-4 gap-6 rounded-2xl;
+  @apply flex max-w-container shadow-md m-auto md:mt-20 md:p-4 gap-6 rounded-2xl flex-col md:flex-row bg-background md:bg-white px-4 relative;
 }
 
 .step-infos {
-  @apply bg-[url('/bg-sidebar-desktop.svg')] bg-auto bg-no-repeat flex flex-col text-white p-8 gap-8 max-w-background h-banner w-full rounded-xl;
+  @apply md:bg-[url('/bg-sidebar-desktop.svg')] bg-[url('/bg-sidebar-mobile.svg')] bg-auto bg-no-repeat flex md:flex-col text-white pt-8 pb-28 md:p-8 gap-8 md:max-w-background md:h-banner w-full md:rounded-xl justify-center md:justify-start;
 }
 
 .next-btn {
@@ -22,7 +26,7 @@ body {
 
 /* Stepper */
 .step-content {
-  @apply flex flex-col text-dark m-auto max-w-addons w-full;
+  @apply md:flex md:flex-col text-dark m-auto max-w-full w-full py-6 px-4 md:max-w-addons md:p-0 rounded-lg;
 }
 
 .activeStep {

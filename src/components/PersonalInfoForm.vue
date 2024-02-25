@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="step">
     <h2 class="text-4xl mb-3 mt-10 text-l font-bold">Personal info</h2>
     <p class="text-grey-300">
       Please provide your name, email address, and phone number.
