@@ -8,6 +8,9 @@ module.exports = {
         card: "138px",
         addons: "450px",
       },
+      width: {
+        addons: "450px",
+      },
       height: {
         banner: "568px",
       },

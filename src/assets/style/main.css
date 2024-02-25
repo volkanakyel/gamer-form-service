@@ -13,7 +13,7 @@ body {
 }
 
 .step-infos {
-  @apply bg-[url('/bg-sidebar-desktop.svg')] bg-auto bg-no-repeat flex flex-col text-white p-8 gap-8 max-w-background w-full rounded-xl;
+  @apply bg-[url('/bg-sidebar-desktop.svg')] bg-auto bg-no-repeat flex flex-col text-white p-8 gap-8 max-w-background h-banner w-full rounded-xl;
 }
 
 .next-btn {
@@ -22,7 +22,7 @@ body {
 
 /* Stepper */
 .step-content {
-  @apply flex flex-col text-dark m-auto;
+  @apply flex flex-col text-dark m-auto max-w-addons w-full;
 }
 
 .activeStep {

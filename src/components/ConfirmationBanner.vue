@@ -1,5 +1,5 @@
 <template>
-  <div class="flex h-banner max-w-addons m-auto flex-col justify-center items-center text-blue-400">
+  <div class="flex max-w-addons m-auto flex-col justify-center items-center text-blue-400">
     <img src="../assets/images/confirmation-icon.svg" alt="" width="80" height="80" />
     <h2 class="text-4xl text-dark mb-3 mt-8 text-l font-bold">
       Thank you!
