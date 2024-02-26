@@ -17,7 +17,7 @@ body {
 }
 
 .step-title {
-  @apply mb-3 mt-10 text-l font-bold;
+  @apply mb-3 md:mt-10 text-l font-bold;
 }
 
 .form-container {
@@ -43,4 +43,24 @@ body {
 
 .inactive-step {
   @apply border-2 border-white w-9 h-9 flex items-center justify-center rounded-full text-white;
+}
+
+.form-input {
+  @apply border border-grey-100 rounded pl-4 py-2 w-full focus:outline-none focus:border-grey-300;
+}
+
+.plan-image {
+  @apply text-left rounded-full;
+}
+
+.add-ons-plan {
+  @apply p-4 border bg-grey-200 border-purple rounded-lg flex items-center justify-between max-w-addons w-full;
+}
+
+.add-ons-price {
+  @apply text-blue text-base text-purple font-light;
+}
+
+.add-ons-checkbox {
+  @apply w-4 h-4 text-blue rounded focus:bg-purple dark:focus:bg-purple focus:ring-2 dark:border-grey-300;
 }
