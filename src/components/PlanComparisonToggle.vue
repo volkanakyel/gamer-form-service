@@ -3,7 +3,7 @@
     <p :class="[activePlan ? 'text-grey-300' : 'font-bold']">Monthly</p>
     <label for="toggleFour" class="flex items-center cursor-pointer select-none text-dark dark:text-white">
       <div class="relative">
-        <input v-model="activePlan" type="checkbox" id="toggleFour" class="peer sr-only"
+        <input v-model="activePlan" type="checkbox" id="toggleFour" class="peer sr-only" @change="toggleEvent"
           aria-label="Toggle between Monthly and Yearly plans" />
         <div class="block h-8 rounded-full box bg-dark dark:bg-dark-2 w-14 peer-checked:bg-primary"></div>
         <div
@@ -16,8 +16,16 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-const activePlan = ref(false);
+import { ref, defineEmits } from 'vue';
+
+const emit = defineEmits<{
+  (event: 'toggleEvent', value: boolean): void;
+}>()
+const activePlan = ref<boolean>(false);
+
+const toggleEvent = (): void => {
+  emit("toggleEvent", activePlan.value);
+}
 </script>
 
 <style scoped></style>

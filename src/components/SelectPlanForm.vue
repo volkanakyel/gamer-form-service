@@ -12,6 +12,7 @@
         <div class="md:mt-9 text-left">
           <p class="text-sm text-dark font-semibold">Arcade</p>
           <p class="text-grey-300 mt-2">$9/mo</p>
+          <p v-show="planStatus" class="text-grey-300 mt-2 text-base">2 months free</p>
         </div>
       </div>
       <div class="plan-selection">
@@ -21,6 +22,7 @@
         <div class="md:mt-9 text-left">
           <p class="text-sm text-dark font-semibold">Advanced</p>
           <p class="text-grey-300 mt-2">$12/mo</p>
+          <p v-show="planStatus" class="text-grey-300 mt-2 text-base">2 months free</p>
         </div>
       </div>
       <div class="plan-selection">
@@ -30,15 +32,22 @@
         <div class="md:mt-9 text-left">
           <p class="text-sm text-dark font-semibold">Pro</p>
           <p class="text-grey-300 mt-2">$15/mo</p>
+          <p v-show="planStatus" class="text-grey-300 mt-2 text-base">2 months free</p>
         </div>
       </div>
     </div>
-    <PlanComparisonToggle />
+    <PlanComparisonToggle @toggleEvent="updatePlanType" />
   </div>
 </template>
 
 <script setup lang="ts">
 import PlanComparisonToggle from './PlanComparisonToggle.vue';
+import { ref } from "vue";
+const planStatus = ref<boolean>(true);
+const updatePlanType = (planState: boolean): void => {
+  planStatus.value = planState;
+}
+
 </script>
 
 <style scoped></style>
