@@ -10,7 +10,6 @@
           <div class="flex items-center space-x-4">
             <div class="flex items-center gap-6">
               <input id="checked-checkbox" type="checkbox" value="" class="add-ons-checkbox" />
-
               <div>
                 <h4 class="text-s font-semibold">Online service</h4>
                 <p class="text-grey-300 text-base">
@@ -31,7 +30,6 @@
           <div class="flex items-center space-x-4">
             <div class="flex items-center gap-6">
               <input id="checked-checkbox" type="checkbox" value="" class="add-ons-checkbox" />
-
               <div>
                 <h4 class="text-s font-semibold">Larger storage</h4>
                 <p class="text-grey-300 text-base">
