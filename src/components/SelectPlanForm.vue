@@ -33,12 +33,12 @@
         </div>
       </div>
     </div>
-    <TogglePlan />
+    <PlanComparisonToggle />
   </div>
 </template>
 
 <script setup lang="ts">
-import TogglePlan from './TogglePlan.vue';
+import PlanComparisonToggle from './PlanComparisonToggle.vue';
 </script>
 
 <style scoped></style>
