@@ -43,7 +43,7 @@
 <script setup lang="ts">
 import PlanComparisonToggle from './PlanComparisonToggle.vue';
 import { ref } from "vue";
-const planStatus = ref<boolean>(true);
+const planStatus = ref<boolean>(false);
 const updatePlanType = (planState: boolean): void => {
   planStatus.value = planState;
 }

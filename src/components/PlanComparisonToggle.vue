@@ -16,7 +16,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, defineEmits } from 'vue';
+import { ref } from 'vue';
 
 const emit = defineEmits<{
   (event: 'toggleEvent', value: boolean): void;
