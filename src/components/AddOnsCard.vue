@@ -1,9 +1,10 @@
 <template>
   <div class="flex gap-4">
-    <div class="add-ons-plan">
+    <div :class="plan.active ? 'active-plan' : 'inactive-plan'">
       <div class="flex items-center space-x-4">
         <div class="flex items-center gap-6">
-          <input id="checked-checkbox" type="checkbox" value="" class="add-ons-checkbox" />
+          <input id="checked-checkbox" type="checkbox" :checked="plan.active" @change="toggleActive"
+            class="add-ons-checkbox" />
           <div>
             <h4 class="text-s font-semibold">{{ plan.title }}</h4>
             <p class="text-grey-300 text-base">
@@ -22,11 +23,15 @@
 </template>
 
 <script setup lang="ts">
-import { AddOnPlan } from "../../services/formData"
-defineProps<{
+import { AddOnPlan } from "../../services/formData";
+
+const props = defineProps<{
   plan: AddOnPlan;
 }>();
 
-</script>
+const emit = defineEmits(['updatePlanActive']);
 
-<style scoped></style>
+const toggleActive = (): void => {
+  emit('updatePlanActive', !props.plan.active);
+};
+</script>

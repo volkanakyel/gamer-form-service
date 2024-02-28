@@ -53,8 +53,12 @@ body {
   @apply text-left rounded-full;
 }
 
-.add-ons-plan {
+.active-plan {
   @apply p-4 border bg-grey-200 border-purple rounded-lg flex items-center justify-between max-w-addons w-full;
+}
+
+.inactive-plan {
+  @apply p-4 border bg-white rounded-lg flex items-center justify-between max-w-addons w-full;
 }
 
 .add-ons-price {

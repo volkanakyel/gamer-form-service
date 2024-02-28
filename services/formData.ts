@@ -4,6 +4,7 @@ interface AddOnPlan {
   active: boolean;
   monthlyPrice: number;
   yearlyPrice: number;
+  planNumber: number;
 }
 
 const addOnsPlan: AddOnPlan[] = [
@@ -13,6 +14,7 @@ const addOnsPlan: AddOnPlan[] = [
     active: false,
     monthlyPrice: 10,
     yearlyPrice: 90,
+    planNumber: 1,
   },
   {
     title: "Larger storage",
@@ -20,6 +22,7 @@ const addOnsPlan: AddOnPlan[] = [
     active: false,
     monthlyPrice: 20,
     yearlyPrice: 120,
+    planNumber: 2,
   },
   {
     title: "Customizable profile",
@@ -27,6 +30,7 @@ const addOnsPlan: AddOnPlan[] = [
     active: false,
     monthlyPrice: 20,
     yearlyPrice: 150,
+    planNumber: 3,
   }
 ];
 
