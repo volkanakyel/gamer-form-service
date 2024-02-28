@@ -23,7 +23,7 @@
 
 <script setup lang="ts">
 import { AddOnPlan } from "../../services/formData"
-const props = defineProps<{
+defineProps<{
   plan: AddOnPlan;
 }>();
 
