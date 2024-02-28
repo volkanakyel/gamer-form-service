@@ -29,3 +29,8 @@ const addOnsPlan: AddOnPlan[] = [
     yearlyPrice: 150,
   }
 ];
+
+export {
+  addOnsPlan,
+  AddOnPlan
+}
