@@ -37,7 +37,9 @@ const showNavigator = computed(() => {
     <FormStepper :currentStep="currentStep" />
     <div class="step-content">
       <transition name="fade" mode="out-in">
-        <component :is="currentComponent" :key="currentStep" />
+        <KeepAlive>
+          <component :is="currentComponent" :key="currentStep" />
+        </KeepAlive>
       </transition>
       <FormNavigator v-show="showNavigator" @updateStep="updateFormStep" :currentStep="currentStep" class="" />
     </div>
