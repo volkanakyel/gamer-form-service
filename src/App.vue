@@ -29,7 +29,7 @@ const updateFormStep = (targetStep: number): void => {
   targetStep > 0 ? currentStep.value++ : currentStep.value--;
 }
 
-const showNavigator = computed(() => {
+const showNavigator = computed<boolean>(() => {
   return currentStep.value > 0 && currentStep.value < 5;
 })
 const loading = ref<boolean>(true);
