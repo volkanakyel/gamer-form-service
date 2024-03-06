@@ -40,14 +40,11 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps({
-  currentStep: {
-    type: Number,
-    default: 1,
-  }
-})
+const props = defineProps<{
+  currentStep: number;
+}>();
 
-const activateStep = (step: number) => {
+const activateStep = (step: number): string => {
   return props.currentStep === step || step === 4 && props.currentStep > 3 ? 'active-step' : 'inactive-step';
 };
 

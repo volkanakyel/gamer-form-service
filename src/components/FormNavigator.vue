@@ -11,7 +11,7 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
-type Emits = (event: 'updateStep', targetStep: number) => void
+
 const props = defineProps({
   currentStep: {
     type: Number,
@@ -27,7 +27,10 @@ const hasNextStep = computed(() => {
   return props.currentStep < 5;
 })
 
+type Emits = (event: 'updateStep', targetStep: number) => void
+
 const emit: Emits = defineEmits(['updateStep'])
+
 const updateStep = (targetStep: number) => {
   emit('updateStep', targetStep)
 }
