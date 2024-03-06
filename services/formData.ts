@@ -6,6 +6,12 @@ interface AddOnPlan {
   yearlyPrice: number;
   planNumber: number;
 }
+
+interface UserInfo {
+  name: string;
+  email: string;
+  phone: string;
+}
 interface planSelection {
   name: string;
   price: number;
@@ -61,5 +67,6 @@ const addOnsPlan: AddOnPlan[] = [
 
 export {
   addOnsPlan,
-  AddOnPlan
+  AddOnPlan,
+  UserInfo
 }
