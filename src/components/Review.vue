@@ -10,7 +10,7 @@
       <!-- Title and Price -->
       <div class="flex justify-between items-center mb-4">
         <div>
-          <h1 class="text-2xl text-dark font-semibold">Arcade (Monthly)</h1>
+          <h1 class="text-2xl text-dark font-semibold">{{ activePlanName }} ({{ planDuration }})</h1>
           <button class="text-blue-500 hover:underline">Change</button>
         </div>
         <p class="text-2xl font-semibold text-dark">$9/mo</p>
@@ -39,6 +39,15 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { inject, Ref, computed } from "vue";
+import { Plan } from "../../services/formData"
+
+const planSelection = inject('planSelection') as Plan[];
+const yearlyPlan = inject<Ref<boolean>>('yearlyPlan');
+
+const activePlanName = computed(() => planSelection?.find((plan: Plan) => plan.active)?.name);
+const planDuration = yearlyPlan?.value ? 'Yearly' : 'Monthly';
+</script>
 
 <style scoped></style>
