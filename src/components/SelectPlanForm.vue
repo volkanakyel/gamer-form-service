@@ -5,7 +5,7 @@
       You have the option of monthly or yearly billing.
     </p>
     <div class="mt-8 flex flex-col md:flex-row justify-start gap-5">
-      <PlanCard v-for="(plan, index) in planSection" :key="index" :plan="plan" />
+      <PlanCard v-for="plan in planSection" :key="plan.id" :plan="plan" />
     </div>
     <PlanComparisonToggle @toggleEvent="updatePlanType" />
   </div>

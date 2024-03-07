@@ -8,8 +8,12 @@ body {
   @apply bg-background text-sm min-h-screen font-ubuntu text-grey-300;
 }
 
-.plan-selection {
+.plan-selection-inactive {
   @apply bg-white p-4 rounded-lg border-2 border-grey-100 md:max-w-card w-full flex justify-start gap-2 md:block;
+}
+
+.plan-selection-active {
+  @apply p-4 rounded-lg border-2 bg-grey-200 border-purple md:max-w-card w-full flex justify-start gap-2 md:block;
 }
 
 .step {

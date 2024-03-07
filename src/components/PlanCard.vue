@@ -1,5 +1,5 @@
 <template>
-  <div class="plan-selection">
+  <div :class="plan.active ? 'plan-selection-active' : 'plan-selection-inactive'">
     <div class="plan-image">
       <img :src="dynamicSrc" alt="" />
     </div>
@@ -27,7 +27,7 @@ const dynamicSrc = computed(() => {
   }
 });
 
-const emit = defineEmits(['updatePlanActive']);
+const emit = defineEmits(['planActive']);
 
 </script>
 

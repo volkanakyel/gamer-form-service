@@ -17,25 +17,33 @@ interface Plan {
   price: number;
   image: string;
   yearlyPlan: boolean;
+  active: boolean;
+  id: number;
 }
 const planSelection: Plan[] = [
   {
     name: "Arcade",
     price: 9,
     image: "arcade-icon.svg",
-    yearlyPlan: false
+    yearlyPlan: false,
+    active: false,
+    id: 1,
   },
   {
     name: "Advanced",
     price: 12,
     image: "advanced-icon.svg",
-    yearlyPlan: false
+    yearlyPlan: false,
+    active: false,
+    id: 2,
   },
   {
     name: "Pro",
     price: 15,
     image: "pro-icon.svg",
-    yearlyPlan: false
+    yearlyPlan: false,
+    active: false,
+    id: 3,
   }]
 
 const addOnsPlan: AddOnPlan[] = [
