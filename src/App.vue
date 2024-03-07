@@ -49,8 +49,10 @@ const personalInfo = ref<UserInfo>({
 });
 provide('formData', personalInfo.value);
 // Step 2
+const yearlyPlan = ref<boolean>(false);
 const selectedPlan = ref<Plan[]>(planSelection);
 provide('planSelection', selectedPlan.value);
+provide('yearlyPlan', yearlyPlan);
 // Step 3
 const addedPlan = ref<AddOnPlan[]>(addOnsPlan);
 provide('addOnsPlan', addedPlan.value);

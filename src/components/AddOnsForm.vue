@@ -5,14 +5,14 @@
       Add-ons help enhance your gaming experience.
     </p>
     <div class="flex flex-col gap-4 mt-8">
-      <AddOnsCard v-for="(plan, index) in addedPlan" :key="index" :plan="plan"
+      <AddOnsCard v-for="(plan, index) in addedPlan" :key="index" :yearlyPlan="yearlyPlan" :plan="plan"
         @updatePlanActive="updatePlanActive(index, $event)" />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { inject } from "vue";
+import { inject, Ref } from "vue";
 import AddOnsCard from './AddOnsCard.vue';
 import { AddOnPlan } from "../../services/formData"
 
@@ -20,6 +20,8 @@ const addedPlan = inject('addOnsPlan') as AddOnPlan[];
 const updatePlanActive = (index: number, newActive: boolean) => {
   addedPlan[index].active = newActive;
 };
+
+const yearlyPlan = inject<Ref<boolean>>('yearlyPlan');
 </script>
 
 <style scoped></style>

@@ -15,14 +15,18 @@
 import PlanComparisonToggle from './PlanComparisonToggle.vue';
 import { Plan } from "../../services/formData"
 import PlanCard from './PlanCard.vue';
-import { inject } from "vue";
+import { inject, Ref } from "vue";
 
 const planSelection = inject('planSelection') as Plan[];
+const yearlyPlan = inject<Ref<boolean>>('yearlyPlan');
 
 const updatePlanType = (): void => {
   planSelection.forEach((plan: Plan) => {
     plan.yearlyPlan = !plan.yearlyPlan
   })
+  if (yearlyPlan) {
+    yearlyPlan.value = !yearlyPlan.value;
+  }
 }
 
 const getSelectedPlan = (planId: number): void => {

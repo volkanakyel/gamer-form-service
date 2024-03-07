@@ -15,7 +15,7 @@
       </div>
       <div>
         <p class="add-ons-price">
-          +${{ plan.monthlyPrice }}/mo
+          +${{ yearlyPlan ? plan.yearlyPrice : plan.monthlyPrice }}/mo
         </p>
       </div>
     </div>
@@ -27,6 +27,7 @@ import { AddOnPlan } from "../../services/formData";
 
 const props = defineProps<{
   plan: AddOnPlan;
+  yearlyPlan: Boolean | undefined;
 }>();
 
 const emit = defineEmits(['updatePlanActive']);
