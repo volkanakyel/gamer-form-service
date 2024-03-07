@@ -1,5 +1,5 @@
 <template>
-  <div :class="plan.active ? 'plan-selection-active' : 'plan-selection-inactive'">
+  <div @click="selectPlan" :class="plan.active ? 'plan-selection-active' : 'plan-selection-inactive'">
     <div class="plan-image">
       <img :src="dynamicSrc" alt="" />
     </div>
@@ -27,8 +27,10 @@ const dynamicSrc = computed(() => {
   }
 });
 
-const emit = defineEmits(['planActive']);
-
+const emit = defineEmits(['selectPlan']);
+const selectPlan = (): void => {
+  emit('selectPlan', props.plan.id);
+}
 </script>
 
 <style scoped></style>

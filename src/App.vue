@@ -10,7 +10,7 @@ import FormNavigator from "./components/FormNavigator.vue";
 import LoadingForm from './components/LoadingForm.vue';
 import type { DefineComponent } from 'vue';
 import { mockFormLoader } from '../services/mockFormLoader';
-import { UserInfo, AddOnPlan, addOnsPlan } from '../services/formData';
+import { UserInfo, AddOnPlan, addOnsPlan, Plan, planSelection } from '../services/formData';
 
 type StepComponentMap = {
   [key: number]: DefineComponent<{}, {}, any>;
@@ -48,6 +48,9 @@ const personalInfo = ref<UserInfo>({
   phone: '',
 });
 provide('formData', personalInfo.value);
+// Step 2
+const selectedPlan = ref<Plan[]>(planSelection);
+provide('planSelection', selectedPlan.value);
 // Step 3
 const addedPlan = ref<AddOnPlan[]>(addOnsPlan);
 provide('addOnsPlan', addedPlan.value);

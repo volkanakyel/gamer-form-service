@@ -5,7 +5,7 @@
       You have the option of monthly or yearly billing.
     </p>
     <div class="mt-8 flex flex-col md:flex-row justify-start gap-5">
-      <PlanCard v-for="plan in planSection" :key="plan.id" :plan="plan" />
+      <PlanCard v-for="plan in planSelection" :key="plan.id" :plan="plan" @selectPlan="getSelectedPlan" />
     </div>
     <PlanComparisonToggle @toggleEvent="updatePlanType" />
   </div>
@@ -13,15 +13,24 @@
 
 <script setup lang="ts">
 import PlanComparisonToggle from './PlanComparisonToggle.vue';
-import { planSelection, Plan } from "../../services/formData"
+import { Plan } from "../../services/formData"
 import PlanCard from './PlanCard.vue';
-import { ref } from "vue";
+import { inject } from "vue";
 
-const planSection = ref<Plan[]>(planSelection);
+const planSelection = inject('planSelection') as Plan[];
 
 const updatePlanType = (): void => {
-  planSection.value.forEach(plan => {
+  planSelection.forEach((plan: Plan) => {
     plan.yearlyPlan = !plan.yearlyPlan
+  })
+}
+
+const getSelectedPlan = (planId: number): void => {
+  planSelection.forEach((plan: Plan) => {
+    plan.active = false;
+    if (plan.id == planId) {
+      plan.active = true;
+    }
   })
 }
 
