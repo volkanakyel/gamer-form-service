@@ -12,13 +12,13 @@ interface UserInfo {
   email: string;
   phone: string;
 }
-interface planSelection {
+interface Plan {
   name: string;
   price: number;
   image: string;
   yearlyPlan: boolean;
 }
-const planSelection: planSelection[] = [
+const planSelection: Plan[] = [
   {
     name: "Arcade",
     price: 9,
@@ -68,5 +68,7 @@ const addOnsPlan: AddOnPlan[] = [
 export {
   addOnsPlan,
   AddOnPlan,
-  UserInfo
+  UserInfo,
+  Plan,
+  planSelection
 }
