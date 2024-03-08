@@ -5,7 +5,7 @@
     </div>
     <div class="md:mt-9 text-left">
       <p class="text-sm text-dark font-semibold">{{ plan.name }}</p>
-      <p class="text-grey-300 mt-2">${{ plan.price }}/mo</p>
+      <p class="text-grey-300 mt-2">${{ planPrice }}/mo</p>
       <p v-show="plan.yearlyPlan" class="text-grey-300 mt-2 text-base">2 months free</p>
     </div>
   </div>
@@ -26,6 +26,8 @@ const dynamicSrc = computed(() => {
     return '';
   }
 });
+
+const planPrice = computed(() => props.plan.yearlyPlan ? props.plan.yearlyPrice : props.plan.price)
 
 const emit = defineEmits(['selectPlan']);
 const selectPlan = (): void => {

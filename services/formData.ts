@@ -15,6 +15,7 @@ interface UserInfo {
 interface Plan {
   name: string;
   price: number;
+  yearlyPrice: number;
   image: string;
   yearlyPlan: boolean;
   active: boolean;
@@ -24,6 +25,7 @@ const planSelection: Plan[] = [
   {
     name: "Arcade",
     price: 9,
+    yearlyPrice: 90,
     image: "arcade-icon.svg",
     yearlyPlan: false,
     active: false,
@@ -32,6 +34,7 @@ const planSelection: Plan[] = [
   {
     name: "Advanced",
     price: 12,
+    yearlyPrice: 120,
     image: "advanced-icon.svg",
     yearlyPlan: false,
     active: false,
@@ -40,6 +43,7 @@ const planSelection: Plan[] = [
   {
     name: "Pro",
     price: 15,
+    yearlyPrice: 150,
     image: "pro-icon.svg",
     yearlyPlan: false,
     active: false,
