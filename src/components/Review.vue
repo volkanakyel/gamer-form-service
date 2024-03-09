@@ -56,7 +56,7 @@ const totalAddedOnPrice = computed(() => {
   }, 0)
 })
 const totalPrice = computed(() => {
-  return totalPlanPrice?.value + totalAddedOnPrice.value;
+  return (totalPlanPrice?.value ?? 0) + totalAddedOnPrice.value;
 });
 </script>
 
