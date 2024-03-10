@@ -1,18 +1,22 @@
-# Vue 3 + TypeScript + Vite
+# Gamer Form Services
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Welcome to Gamer Form Services - a Vue 3 application utilizing TypeScript and the Composition API. This application is a dynamic, user-friendly multi-step form tailored for the gaming community. Users can choose their ideal gaming plan, add extras, and checkout with ease. Our form ensures a seamless experience, equipped with step navigation and comprehensive input validations, ensuring every detail is perfect.
 
-## Recommended IDE Setup
+## Features
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+- **Dynamic Multi-Step Form**: Navigate through the form's stages with the option to return to previous steps without losing your progress.
+- **Step Validation**: Each step is validated before moving to the next, ensuring all necessary information is complete and correct.
+- **Form Input Validation**: Robust input validation to ensure the data integrity and prompt users for any incorrect or missing information.
+- **Vue 3 Composition API**: Leverages the latest Vue 3 features for a more maintainable and readable codebase.
+- **TypeScript Integration**: Provides static type checking to improve the development experience and ensure type safety.
+- **Customizable Plans**: Select the gaming plan that aligns with your needs and preferences.
+- **Add Extras**: Customize your chosen plan with additional services and features.
+- **Review & Checkout**: Review all selections before finalizing, ensuring a tailored gaming experience.
 
-## Type Support For `.vue` Imports in TS
+## Getting Started
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+Follow these simple steps to get a local copy up and running:
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
-
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/volkanakyel/gamer-form-service
