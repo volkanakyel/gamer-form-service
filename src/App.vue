@@ -65,7 +65,7 @@ provide('addOnsPlan', addedPlan.value);
     <div class="step-content">
       <transition name="fade" mode="out-in">
         <KeepAlive>
-          <component :is="currentComponent" :key="currentStep" />
+          <component :is="currentComponent" :key="currentStep" @goToSelectPlan="currentStep = $event" />
         </KeepAlive>
       </transition>
       <FormNavigator v-show="showNavigator" @updateStep="updateFormStep" :currentStep="currentStep" class="" />

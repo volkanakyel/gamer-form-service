@@ -11,7 +11,7 @@
       <div class="flex justify-between items-center mb-4">
         <div>
           <h1 class="text-2xl text-dark font-semibold">{{ activePlan?.name }} ({{ planDuration }})</h1>
-          <button class="text-blue-500 hover:underline">Change</button>
+          <button @click="goToSelectPlan" class="text-blue-500 hover:underline">Change</button>
         </div>
         <p class="text-2xl font-semibold text-dark">${{ totalPlanPrice }} /mo</p>
       </div>
@@ -44,7 +44,10 @@ const activePlan = computed(() => planSelection?.find((plan: Plan) => plan.activ
 const planAdded = computed(() => addedPlan.filter((plan: AddOnPlan) => plan.active));
 
 const planDuration = yearlyPlan?.value ? 'Yearly' : 'Monthly';
-
+const emit = defineEmits(['goToSelectPlan'])
+const goToSelectPlan = () => {
+  emit('goToSelectPlan', 2);
+}
 // Total plan price
 const totalPlanPrice = computed(() => yearlyPlan?.value ? activePlan.value?.yearlyPrice : activePlan.value?.price);
 const totalAddedOnPrice = computed(() => {
