@@ -1,6 +1,6 @@
 # Gamer Form Services
 
-Welcome to Gamer Form Services - a Vue 3 application utilizing TypeScript and the Composition API. This application is a dynamic, user-friendly multi-step form tailored for the gaming community. Users can choose their ideal gaming plan, add extras, and checkout with ease. Our form ensures a seamless experience, equipped with step navigation and comprehensive input validations, ensuring every detail is perfect.
+Welcome to Gamer Form Services - a Vue 3 application with Tailwind utilizing TypeScript and the Composition API. This application is a dynamic, user-friendly multi-step form tailored for the gaming community. Users can choose their ideal gaming plan, add extras, and checkout with ease. Our form ensures a seamless experience, equipped with step navigation and comprehensive input validations, ensuring every detail is perfect.
 
 Inspired by Frontend Mentor
 
