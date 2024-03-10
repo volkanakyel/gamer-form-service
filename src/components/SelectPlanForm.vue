@@ -32,7 +32,7 @@ const updatePlanType = (): void => {
 const getSelectedPlan = (planId: number): void => {
   planSelection.forEach((plan: Plan) => {
     plan.active = false;
-    if (plan.id == planId) {
+    if (plan.id === planId) {
       plan.active = true;
     }
   })

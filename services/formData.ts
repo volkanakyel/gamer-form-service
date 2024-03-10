@@ -28,7 +28,7 @@ const planSelection: Plan[] = [
     yearlyPrice: 90,
     image: "arcade-icon.svg",
     yearlyPlan: false,
-    active: false,
+    active: true,
     id: 1,
   },
   {
