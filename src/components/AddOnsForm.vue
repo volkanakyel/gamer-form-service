@@ -12,7 +12,7 @@
 </template>
 
 <script setup lang="ts">
-import { inject, Ref } from "vue";
+import { inject } from "vue";
 import AddOnsCard from './AddOnsCard.vue';
 import { AddOnPlan } from "../../services/formData"
 
@@ -21,7 +21,7 @@ const updatePlanActive = (index: number, newActive: boolean) => {
   addedPlan[index].active = newActive;
 };
 
-const yearlyPlan = inject<Ref<boolean>>('yearlyPlan');
+const yearlyPlan = inject<boolean>('yearlyPlan');
 </script>
 
 <style scoped></style>

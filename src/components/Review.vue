@@ -33,11 +33,11 @@
 </template>
 
 <script setup lang="ts">
-import { inject, Ref, computed } from "vue";
+import { inject, computed } from "vue";
 import { AddOnPlan, Plan } from "../../services/formData"
 
 const planSelection = inject('planSelection') as Plan[];
-const yearlyPlan = inject<Ref<boolean>>('yearlyPlan');
+const yearlyPlan = inject<boolean>('yearlyPlan');
 const addedPlan = inject('addOnsPlan') as AddOnPlan[];
 
 const activePlan = computed(() => planSelection?.find((plan: Plan) => plan.active));
