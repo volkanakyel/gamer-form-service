@@ -4,6 +4,8 @@ Welcome to Gamer Form Services - a Vue 3 application utilizing TypeScript and th
 
 Inspired by Frontend Mentor
 
+Project Link: https://gamer-form-services.netlify.app/
+
 ## Features
 
 - **Dynamic Multi-Step Form**: Navigate through the form's stages with the option to return to previous steps without losing your progress.
@@ -57,6 +59,3 @@ This project is distributed under the MIT License. See the LICENSE file for more
 ## Contact
 
 Volkan AKYEL - @uikielle - volkan@uikielle.com
-
-Project Link: https://gamer-form-services.netlify.app/
-
